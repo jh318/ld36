@@ -1,4 +1,4 @@
-///enemyAttributes(argument0,argument1,argument2,argument3);
+///enemyAttributes(hsp,vsp,msp,jsp);
 hsp = argument0; //horizontalspeed
 vsp = argument1; //verticalspeed
 msp = argument2; //movespeed
