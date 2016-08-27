@@ -8,6 +8,7 @@
   <sprites name="sprites">
     <sprites name="EnemySprites">
       <sprite>sprites\spr_tank</sprite>
+      <sprite>sprites\spr_robot</sprite>
     </sprites>
     <sprite>sprites\spr_player</sprite>
     <sprite>sprites\spr_village</sprite>
@@ -17,10 +18,12 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_enemyMoveCollison.gml</script>
+    <script>scripts\scr_enemyAttributes.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="EnemyObjects">
       <object>objects\obj_tank</object>
+      <object>objects\obj_robot</object>
     </objects>
     <object>objects\obj_player</object>
     <object>objects\obj_village</object>
