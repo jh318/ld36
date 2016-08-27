@@ -117,7 +117,8 @@ projectile = instance_create(x,y,obj_projectile);
 if(mdirection != 0){
 pdirection = mdirection} //Hold either -1 or 1 in new variable; Avoid 0 - sitting projectile
 projectile.direction = image_angle;
-projectile.image_angle = image_angle;
+//projectile.image_angle = image_angle; //Probably unncessary for now. 
+//Change angle of proj based on player angle which probably doesn't change
 projectile.speed = 15 * pdirection;//Change direction of projectile
 </string>
           </argument>
