@@ -25,12 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Player Attributes
+            <string>///PlayerAttributes
 hsp = 0; //horizontalspeed
 vsp = 0; //verticalspeed
 jsp = 4; //jumpspeed
 msp = 5; //movespeed
-grav = 0.2;
+grav = 0.2; //gravity applied to player object
 </string>
           </argument>
         </arguments>
@@ -63,23 +63,16 @@ key_jump = (keyboard_check(vk_up));
 //React to Controls
 mdirection = key_left + key_right; //check move direction
 hsp = mdirection * msp; //apply movespeed to move direction
-if (vsp &lt; 10) vsp += grav; //fall to ground
+if (vsp &lt; 10) vsp += grav; //fall to ground. //unsure about 10 comparison
 
-if (place_meeting(x,y+1,obj_tile))
+if (place_meeting(x,y+1,obj_tile)) //check if ground is 1px below obj
 {
     vsp = key_jump * -jsp
 }
 
-if (place_meeting(x+hsp,y,obj_tile))
-{
-    while(!place_meeting(x+sign(hsp),y,obj_tile))
-    {
-        x += sign(hsp);
-    }
-    hsp = 0;
-}
-x += hsp;
 
+
+//REPEAT for y direction
 if (place_meeting(x,y+vsp,obj_tile))
 {
     while(!place_meeting(x,y+sign(vsp),obj_tile))
