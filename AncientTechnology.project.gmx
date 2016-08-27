@@ -15,6 +15,9 @@
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\scr_enemyMoveCollison.gml</script>
+  </scripts>
   <objects name="objects">
     <objects name="EnemyObjects">
       <object>objects\obj_tank</object>
