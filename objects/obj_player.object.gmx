@@ -30,6 +30,7 @@ hsp = 0; //horizontalspeed
 vsp = 0; //verticalspeed
 jsp = 4; //jumpspeed
 msp = 5; //movespeed
+grav = 0.2;
 </string>
           </argument>
         </arguments>
@@ -57,10 +58,17 @@ msp = 5; //movespeed
 //Assign Move Control
 key_right = keyboard_check(vk_right);
 key_left = -(keyboard_check(vk_left));
+key_jump = (keyboard_check(vk_up));
 
 //React to Controls
 mdirection = key_left + key_right; //check move direction
 hsp = mdirection * msp; //apply movespeed to move direction
+if (vsp &lt; 10) vsp += grav; //fall to ground
+
+if (place_meeting(x,y+1,obj_tile))
+{
+    vsp = key_jump * -jsp
+}
 
 if (place_meeting(x+hsp,y,obj_tile))
 {
@@ -69,11 +77,18 @@ if (place_meeting(x+hsp,y,obj_tile))
         x += sign(hsp);
     }
     hsp = 0;
-    
-
 }
 x += hsp;
 
+if (place_meeting(x,y+vsp,obj_tile))
+{
+    while(!place_meeting(x,y+sign(vsp),obj_tile))
+    {
+        y+=sign(vsp);
+    }
+    vsp = 0;
+}
+y += vsp;
 </string>
           </argument>
         </arguments>
