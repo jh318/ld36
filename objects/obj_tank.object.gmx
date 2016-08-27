@@ -58,30 +58,21 @@ hsp = msp;
 if (vsp &lt; 10) vsp += grav; //apply gravity to object
 x+=hsp; //Move horizontally
 
- if (place_meeting(x,y,obj_village)) //check for village collision
-    {
-        msp = 0;
-    }
-if (place_meeting(x+hsp,y,obj_tile)) //Check if tile is 1 pixel away
-{
-    while(!place_meeting(x+sign(hsp),y,obj_tile)) //Allow obj to move 1 more
-    {                                               //pixel toward wall
-        x += sign(hsp);
-    }
-    hsp = 0;//Do not allow object to clip in object
-   
-}
-x += hsp; //Move object in x direction
+move_towards_point(obj_village.x, obj_village.y, 5);
 
-if (place_meeting(x,y+vsp,obj_tile))
+/*
+if (place_meeting(x,y+1,obj_tile)) //check if ground is 1px below obj
 {
-    while(!place_meeting(x,y+sign(vsp),obj_tile))
-    {
-        y+=sign(vsp);
-    }
-    vsp = 0;
+    vsp = 0; //DO NOT pass ground
 }
-y += vsp;
+
+x+=hsp; //Apply horizontal movement speed
+y+=vsp; //Apply vertical movement speed; probably not used
+
+if (place_meeting(x+sign(hsp),y,obj_village)) //check for village collision
+    {
+        msp = 0; //DO NOT pass village
+    }
 </string>
           </argument>
         </arguments>
