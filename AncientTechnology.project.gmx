@@ -5,9 +5,25 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprite>sprites\spr_player</sprite>
+    <sprite>sprites\spr_tank</sprite>
+    <sprite>sprites\spr_village</sprite>
+    <sprite>sprites\spr_desert</sprite>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <objects name="objects">
+    <objects name="Enemies">
+      <object>objects\obj_tank</object>
+    </objects>
+    <object>objects\obj_player</object>
+    <object>objects\obj_village</object>
+    <object>objects\obj_tile</object>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\rm_village</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
