@@ -31,6 +31,10 @@ vsp = 0; //verticalspeed
 jsp = 4; //jumpspeed
 msp = 2; //movespeed
 grav = 0.2; //gravity applied to player object
+mdirection = 0; //Boolean for direction
+
+
+
 </string>
           </argument>
         </arguments>
@@ -55,15 +59,14 @@ grav = 0.2; //gravity applied to player object
             <kind>1</kind>
             <string>///TankAI
 //MOVEMENT
-mdirection =0;
-if (obj_tank.x &gt; obj_village.x){ //determine position of village
+if (self.x &gt; obj_village.x){ //determine position of village
     mdirection = -1;  } //Move left
 else{
     mdirection = 1; } //Move right
+     
 hsp = mdirection * msp; //Assign hsp move right/left
 x+=hsp;  //Move horizontally
 y+=vsp; //Apply vertical movement speed; probably not used
-
 
 ///COLLISION
 if (vsp &lt; 10) vsp += grav; //apply gravity to object
