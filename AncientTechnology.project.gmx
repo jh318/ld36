@@ -13,6 +13,7 @@
     <sprite>sprites\spr_player</sprite>
     <sprite>sprites\spr_village</sprite>
     <sprite>sprites\spr_desert</sprite>
+    <sprite>sprites\spr_projectile</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -29,6 +30,7 @@
     <object>objects\obj_village</object>
     <object>objects\obj_director</object>
     <object>objects\obj_tile</object>
+    <object>objects\obj_projectile</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_village</room>

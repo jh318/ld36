@@ -64,6 +64,7 @@ key_jump = (keyboard_check(vk_up));
 mdirection = key_left + key_right; //check move direction
 hsp = mdirection * msp; //apply movespeed to move direction
 if (vsp &lt; 10) vsp += grav; //fall to ground. //unsure about 10 comparison
+if (mdirection != 0) image_xscale = mdirection; //flip sprite
 
 if (place_meeting(x,y+1,obj_tile)) //check if ground is 1px below obj
 {
@@ -89,6 +90,35 @@ if (place_meeting(x,y+vsp,obj_tile))
     vsp = 0;
 }
 y += vsp;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="90">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///CreateProjectile
+projectile = instance_create(x,y,obj_projectile);
+if(mdirection != 0){
+pdirection = mdirection} //Hold either -1 or 1 in new variable; Avoid 0 - sitting projectile
+projectile.direction = image_angle;
+projectile.image_angle = image_angle;
+projectile.speed = 15 * pdirection;//Change direction of projectile
 </string>
           </argument>
         </arguments>
