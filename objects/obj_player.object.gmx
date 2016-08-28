@@ -126,8 +126,14 @@ x+=hsp // Apply horizontal movement
             <string>///Shoot
 //SHOOT UP
 key_z = keyboard_check_pressed(ord('Z')); //create Z input
+key_x = keyboard_check_pressed(ord('X')); //Same for below;
+key_c = keyboard_check_pressed(ord('C')); //Bind keys
+key_v = keyboard_check_pressed(ord('V'));
+key_a = keyboard_check_pressed(ord('A'));
+key_s = keyboard_check_pressed(ord('S'));
+key_d = keyboard_check_pressed(ord('D'));
 
-if key_up &amp;&amp; key_z{ //Check if up and z are pressed
+if (key_up &amp;&amp; key_z)||(key_up &amp;&amp; key_x)||(key_up &amp;&amp; key_c){ //Check if up and z are pressed
     projectile = instance_create(x,y+12,obj_projectile); //create projectile slightly higher
     projectile.direction = 90; //Rotate projectile directionup
     projectile.image_angle = 90; //Rotate image up
@@ -136,7 +142,7 @@ if key_up &amp;&amp; key_z{ //Check if up and z are pressed
 
 
 ///SHOOT LEFT AND RIGHT
-if key_z &amp;&amp; !key_up{
+if (key_z &amp;&amp; !key_up)||(key_x &amp;&amp; !key_up)||(key_c &amp;&amp; !key_up){
     projectile = instance_create(x,y,obj_projectile);
 if(mdirection != 0){
     pdirection = mdirection} //Hold either -1 or 1 in new variable; Avoid 0 - sitting projectile
