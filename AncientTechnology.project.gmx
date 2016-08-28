@@ -3,42 +3,7 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="2" name="datafiles">
-    <datafile>
-      <name>Explosion1.bfxrsound</name>
-      <exists>-1</exists>
-      <size>82</size>
-      <exportAction>2</exportAction>
-      <exportDir></exportDir>
-      <overwrite>0</overwrite>
-      <freeData>-1</freeData>
-      <removeEnd>0</removeEnd>
-      <store>0</store>
-      <ConfigOptions>
-        <Config name="Default">
-          <CopyToMask>9223372036854775807</CopyToMask>
-        </Config>
-      </ConfigOptions>
-      <filename>Explosion1.bfxrsound</filename>
-    </datafile>
-    <datafile>
-      <name>Explosion2.bfxrsound</name>
-      <exists>-1</exists>
-      <size>102</size>
-      <exportAction>2</exportAction>
-      <exportDir></exportDir>
-      <overwrite>0</overwrite>
-      <freeData>-1</freeData>
-      <removeEnd>0</removeEnd>
-      <store>0</store>
-      <ConfigOptions>
-        <Config name="Default">
-          <CopyToMask>9223372036854775807</CopyToMask>
-        </Config>
-      </ConfigOptions>
-      <filename>Explosion2.bfxrsound</filename>
-    </datafile>
-  </datafiles>
+  <datafiles number="2" name="datafiles"/>
   <NewExtensions/>
   <sounds name="sound">
     <sounds name="Explosions">
@@ -62,6 +27,13 @@
       <sound>sound\snd_explosion18</sound>
       <sound>sound\snd_explosion19</sound>
       <sound>sound\snd_explosion20</sound>
+      <sound>sound\snd_explosion21</sound>
+      <sound>sound\snd_explosion22</sound>
+    </sounds>
+    <sounds name="Shoot">
+      <sound>sound\snd_shoot1</sound>
+      <sound>sound\snd_shoot2</sound>
+      <sound>sound\snd_shoot3</sound>
     </sounds>
   </sounds>
   <sprites name="sprites">
