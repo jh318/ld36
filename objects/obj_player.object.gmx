@@ -59,7 +59,8 @@ pdirection = 1;
 //Assign Move Control
 key_right = keyboard_check(vk_right);
 key_left = -(keyboard_check(vk_left));
-key_jump = (keyboard_check(vk_up));
+key_up = (keyboard_check(vk_up));
+key_jump = (keyboard_check(vk_space));
 
 //React to Controls
 mdirection = key_left + key_right; //check move direction
@@ -106,8 +107,6 @@ x+=hsp // Apply horizontal movement
           </argument>
         </arguments>
       </action>
-    </event>
-    <event eventtype="9" enumb="90">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -124,14 +123,28 @@ x+=hsp // Apply horizontal movement
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///CreateProjectile
-projectile = instance_create(x,y,obj_projectile);
+            <string>///Shoot
+//SHOOT UP
+key_z = keyboard_check_pressed(ord('Z')); //create Z input
+
+if key_up &amp;&amp; key_z{
+    projectile = instance_create(x,y+12,obj_projectile);
+    projectile.direction = 90;
+    projectile.image_angle = 90;
+    projectile.speed = 15;
+}
+
+
+///SHOOT LEFT AND RIGHT
+if key_z &amp;&amp; !key_up{
+    projectile = instance_create(x,y,obj_projectile);
 if(mdirection != 0){
-pdirection = mdirection} //Hold either -1 or 1 in new variable; Avoid 0 - sitting projectile
-projectile.direction = image_angle;
-//projectile.image_angle = image_angle; //Probably unncessary for now. 
-//Change angle of proj based on player angle which probably doesn't change
-projectile.speed = 15 * pdirection;//Change direction of projectile
+    pdirection = mdirection} //Hold either -1 or 1 in new variable; Avoid 0 - sitting projectile
+    projectile.direction = image_angle;
+    //projectile.image_angle = image_angle; //Probably unncessary for now. 
+    //Change angle of proj based on player angle which probably doesn't change
+    projectile.speed = 15 * pdirection;//Change direction of projectile
+}
 </string>
           </argument>
         </arguments>
