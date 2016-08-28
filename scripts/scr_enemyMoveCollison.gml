@@ -16,7 +16,7 @@ if (place_meeting(x,y+1,obj_tile)) //check if ground is 1px below obj
     vsp = 0; //DO NOT pass ground
 }
 
-if (place_meeting(x+sign(hsp),y,obj_village)) //check for village collision
+/*if (place_meeting(x+sign(hsp),y,obj_village)) //check for village collision
     {
         msp = 0; //DO NOT pass village
-    }
+    }*/

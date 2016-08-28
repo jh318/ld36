@@ -31,6 +31,7 @@ vsp = 0; //verticalspeed
 jsp = 4; //jumpspeed
 msp = 5; //movespeed
 grav = 0.2; //gravity applied to player object
+pdirection = 1;
 </string>
           </argument>
         </arguments>
