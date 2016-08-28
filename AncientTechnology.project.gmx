@@ -33,6 +33,7 @@
     <object>objects\obj_director</object>
     <object>objects\obj_tile</object>
     <object>objects\obj_projectile</object>
+    <object>objects\obj_spawner</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_village</room>
