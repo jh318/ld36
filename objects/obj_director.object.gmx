@@ -31,9 +31,28 @@ time = 5 * 60; //Set timer to 5:00 minutes
 alarm[0] = 1 * 60; //set countdown to 1 second every 60 frames
 alarm[1] = 10 *60;
 
-explosions[0] = snd_explosion2;
-explosions[1] = snd_explosion1;
+
+//Explosion sfx array
+explosions[0] = snd_explosion1;
+explosions[1] = snd_explosion2;
 explosions[2] = snd_explosion3;
+explosions[3] = snd_explosion4;
+explosions[4] = snd_explosion5;
+explosions[5] = snd_explosion6;
+explosions[6] = snd_explosion7;
+explosions[7] = snd_explosion8;
+explosions[8] = snd_explosion9;
+explosions[9] = snd_explosion10;
+explosions[10] = snd_explosion11;
+explosions[11] = snd_explosion12;
+explosions[12] = snd_explosion13;
+explosions[13] = snd_explosion14;
+explosions[14] = snd_explosion15;
+explosions[15] = snd_explosion16;
+explosions[16] = snd_explosion17;
+explosions[17] = snd_explosion18;
+explosions[18] = snd_explosion19;
+explosions[19] = snd_explosion20;
  
 </string>
           </argument>

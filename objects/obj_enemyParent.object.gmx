@@ -28,10 +28,10 @@
             <string>///DestroyInstance
 hp -= 1; //lose 1 hp on collision with player projectile
 if hp == 0{
- score+=1; //When hp = 0, add to score
- i = random(array_length_1d(obj_director.explosions)); //Randomly generate number based on array size
- audio_play_sound(obj_director.explosions[i], 10, false); //Play random sound from explosion array
- instance_destroy(); //when Hp = 0, die
+     score+=1; //When hp = 0, add to score
+     i = random(array_length_1d(obj_director.explosions)); //Randomly generate number based on array size
+     audio_play_sound(obj_director.explosions[i], 10, false); //Play random sound from explosion array
+     instance_destroy(); //when Hp = 0, die
  }
 </string>
           </argument>

@@ -42,9 +42,26 @@
   <NewExtensions/>
   <sounds name="sound">
     <sounds name="Explosions">
-      <sound>sound\snd_explosion2</sound>
       <sound>sound\snd_explosion1</sound>
+      <sound>sound\snd_explosion2</sound>
       <sound>sound\snd_explosion3</sound>
+      <sound>sound\snd_explosion4</sound>
+      <sound>sound\snd_explosion5</sound>
+      <sound>sound\snd_explosion6</sound>
+      <sound>sound\snd_explosion7</sound>
+      <sound>sound\snd_explosion8</sound>
+      <sound>sound\snd_explosion9</sound>
+      <sound>sound\snd_explosion10</sound>
+      <sound>sound\snd_explosion11</sound>
+      <sound>sound\snd_explosion12</sound>
+      <sound>sound\snd_explosion13</sound>
+      <sound>sound\snd_explosion14</sound>
+      <sound>sound\snd_explosion15</sound>
+      <sound>sound\snd_explosion16</sound>
+      <sound>sound\snd_explosion17</sound>
+      <sound>sound\snd_explosion18</sound>
+      <sound>sound\snd_explosion19</sound>
+      <sound>sound\snd_explosion20</sound>
     </sounds>
   </sounds>
   <sprites name="sprites">
