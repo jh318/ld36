@@ -71,7 +71,7 @@ if (place_meeting(x,y+1,obj_tile)) //check if ground is 1px below obj
 {
     vsp = key_jump * -jsp
 }
-if (place_meeting(x+hsp,y,obj_tile)) //Check if tile is near obj
+if (place_meeting(x+hsp,y,obj_tile)) //Check if tile is near obj_TILE
 {
     while(!place_meeting(x+sign(hsp),y,obj_tile))//Let obj move within 1 px of tile
     {
@@ -79,7 +79,7 @@ if (place_meeting(x+hsp,y,obj_tile)) //Check if tile is near obj
     }
     hsp = 0; //If obj collides, do not let it move further
 }
-x+=hsp // Apply horizontal movement
+
 
 //REPEAT for y direction
 if (place_meeting(x,y+vsp,obj_tile))
@@ -90,7 +90,18 @@ if (place_meeting(x,y+vsp,obj_tile))
     }
     vsp = 0;
 }
+
 y += vsp;
+
+if (place_meeting(x+hsp,y,obj_boundary)) //Check if tile is near obj_BOUNDARY
+{
+    while(!place_meeting(x+sign(hsp),y,obj_boundary))//Let obj move within 1 px of tile
+    {
+        x += sign(hsp);
+    }
+    hsp = 0; //If obj collides, do not let it move further
+}
+x+=hsp // Apply horizontal movement
 </string>
           </argument>
         </arguments>
