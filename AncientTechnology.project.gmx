@@ -44,6 +44,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_village</room>
+    <room>rooms\rm_endgame</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

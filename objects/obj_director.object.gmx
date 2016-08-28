@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -29,7 +29,7 @@
 score = 0; //Set game score to 0;
 time = 5 * 60; //Set timer to 5:00 minutes
 alarm[0] = 1 * 60; //set countdown to 1 second every 60 frames
-scorestring = "Score:";
+alarm[1] = 10 *60;
 </string>
           </argument>
         </arguments>
@@ -54,7 +54,35 @@ scorestring = "Score:";
             <kind>1</kind>
             <string>///Countdown
 time -= 1; //Subtract 1 second
-alarm[0] = 1 * 60; //Reset subtraction clock to 1 second
+if(time != 0){
+alarm[0] = 1 * 60;} //Reset subtraction clock to 1 second
+if(time == 0) finalScore = score;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///CheckForGameState
+/*if(time &lt;= 0){
+//room_goto(rm_endgame);
+}*/
 </string>
           </argument>
         </arguments>
@@ -83,6 +111,10 @@ draw_text_transformed(20,40,string("Score: "),1,1,0)
 draw_text_transformed(80,40,string(score),1,1,0) //Draw socre position and scale size
 draw_text_transformed(20,80,string("Time: "),1,1,0)
 draw_text_transformed(80,80,string(time),1,1,0); //Draw timer
+
+if(time &lt;= 0){ //When timer reaches 0, display final score; rm will switch to rm_endgame
+draw_text_transformed(342,384,string("Final Score: "),2,2,0) //Draw text "Final score in middle of screen
+draw_text_transformed(602,384,string(finalScore),2,2,0)} //Draw final score at end of game
 
 </string>
           </argument>
