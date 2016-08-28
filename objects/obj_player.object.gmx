@@ -127,11 +127,11 @@ x+=hsp // Apply horizontal movement
 //SHOOT UP
 key_z = keyboard_check_pressed(ord('Z')); //create Z input
 
-if key_up &amp;&amp; key_z{
-    projectile = instance_create(x,y+12,obj_projectile);
-    projectile.direction = 90;
-    projectile.image_angle = 90;
-    projectile.speed = 15;
+if key_up &amp;&amp; key_z{ //Check if up and z are pressed
+    projectile = instance_create(x,y+12,obj_projectile); //create projectile slightly higher
+    projectile.direction = 90; //Rotate projectile directionup
+    projectile.image_angle = 90; //Rotate image up
+    projectile.speed = 15; //Set projecile speed
 }
 
 
