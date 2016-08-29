@@ -5,6 +5,7 @@ else{
     mdirection = 1; } //Move right
      
 hsp = mdirection * msp; //Assign hsp move right/left
+self.image_xscale = mdirection;
 x+=hsp;  //Move horizontally
 y+=vsp; //Apply vertical movement speed; probably not used
 
