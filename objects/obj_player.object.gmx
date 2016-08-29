@@ -28,10 +28,16 @@
             <string>///PlayerAttributes
 hsp = 0; //horizontalspeed
 vsp = 0; //verticalspeed
-jsp = 18; //jumpspeed
+jsp = 15; //jumpspeed
 msp = 6; //movespeed
 grav = 0.4; //gravity applied to player object
 pdirection = 1;
+
+//Weapons
+weapons[0] = spr_projectile;
+weapons[1] = spr_projectile2;
+weapons[2] = spr_projectile3;
+weapons[3] = spr_projectile4;
 </string>
           </argument>
         </arguments>
@@ -58,7 +64,9 @@ pdirection = 1;
 
 //Assign Move Control
 key_right = keyboard_check(vk_right);
+//right_check = keyboard_check_pressed(vk_right);
 key_left = -(keyboard_check(vk_left));
+//left_check = -(keyboard_check_pressed(vk_left));
 key_up = (keyboard_check(vk_up));
 key_jump = (keyboard_check(vk_space));
 
@@ -132,17 +140,25 @@ key_v = keyboard_check_pressed(ord('V'));
 key_a = keyboard_check_pressed(ord('A'));
 key_s = keyboard_check_pressed(ord('S'));
 key_d = keyboard_check_pressed(ord('D'));
+key_f = keyboard_check_pressed(ord('F'));
+key_g = keyboard_check_pressed(ord('G'));
+key_q = keyboard_check_pressed(ord('Q'));
+key_w = keyboard_check_pressed(ord('W'));
+key_e = keyboard_check_pressed(ord('E'));
+key_r = keyboard_check_pressed(ord('R'));
+key_t = keyboard_check_pressed(ord('T'));
+key_b = keyboard_check_pressed(ord('B'));
 
-if (key_up &amp;&amp; key_z)||(key_up &amp;&amp; key_x)||(key_up &amp;&amp; key_c)||(key_up &amp;&amp; key_v)||(key_up &amp;&amp; key_a)||(key_up &amp;&amp; key_s)||(key_up &amp;&amp; key_d){ //Check if up and z are pressed
+if (key_up &amp;&amp; key_z)||(key_up &amp;&amp; key_x)||(key_up &amp;&amp; key_c)||(key_up &amp;&amp; key_v)||(key_up &amp;&amp; key_a)||(key_up &amp;&amp; key_s)||(key_up &amp;&amp; key_d)||(key_up &amp;&amp; key_f)||(key_up &amp;&amp; key_g)||(key_up &amp;&amp; key_q)||(key_up &amp;&amp; key_w)||(key_up &amp;&amp; key_e)||(key_up &amp;&amp; key_r)||(key_up &amp;&amp; key_t)||(key_up &amp;&amp; key_b){ //Check if up and z are pressed
     projectile = instance_create(x,y+12,obj_projectile); //create projectile slightly higher
     projectile.direction = 90; //Rotate projectile directionup
-    projectile.image_angle = 90; //Rotate image up
+    projectile.image_angle = 90*sign(pdirection); //Rotate image up
     projectile.speed = 15; //Set projecile speed
 }
 
 
 ///SHOOT LEFT AND RIGHT
-if (key_z &amp;&amp; !key_up)||(key_x &amp;&amp; !key_up)||(key_c &amp;&amp; !key_up)||(key_v &amp;&amp; !key_up)||(key_a &amp;&amp; !key_up)||(key_s &amp;&amp; !key_up)||(key_d &amp;&amp; !key_up){
+if (key_z &amp;&amp; !key_up)||(key_x &amp;&amp; !key_up)||(key_c &amp;&amp; !key_up)||(key_v &amp;&amp; !key_up)||(key_a &amp;&amp; !key_up)||(key_s &amp;&amp; !key_up)||(key_d &amp;&amp; !key_up)||(key_f &amp;&amp; !key_up)||(key_g &amp;&amp; !key_up)||(key_q &amp;&amp; !key_up)||(key_w &amp;&amp; !key_up)||(key_e &amp;&amp; !key_up)||(key_r &amp;&amp; !key_up)||(key_t &amp;&amp; !key_up)||(key_b &amp;&amp; !key_up){
     projectile = instance_create(x,y,obj_projectile);
 if(mdirection != 0){
     pdirection = mdirection} //Hold either -1 or 1 in new variable; Avoid 0 - sitting projectile

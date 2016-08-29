@@ -49,8 +49,13 @@
     <sprite>sprites\spr_player</sprite>
     <sprite>sprites\spr_village</sprite>
     <sprite>sprites\spr_desert</sprite>
-    <sprite>sprites\spr_projectile</sprite>
     <sprite>sprites\spr_boundary</sprite>
+    <sprites name="weapons">
+      <sprite>sprites\spr_projectile2</sprite>
+      <sprite>sprites\spr_projectile</sprite>
+      <sprite>sprites\spr_projectile3</sprite>
+      <sprite>sprites\spr_projectile4</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -66,6 +71,8 @@
       <object>objects\obj_enemyParent</object>
       <object>objects\obj_drone</object>
       <object>objects\obj_satellite</object>
+      <object>objects\obj_satellite2</object>
+      <object>objects\obj_satellite3</object>
       <object>objects\obj_satelliteBeam</object>
       <object>objects\obj_nuke</object>
     </objects>
@@ -82,7 +89,6 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_village</room>
-    <room>rooms\rm_endgame</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

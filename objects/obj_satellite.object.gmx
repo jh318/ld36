@@ -26,7 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>///Alarms
-object_set_visible(obj_satellite, false);
+visible = false
+//object_set_visible(obj_satellite, false);
 alarm[0] = 268 * 60; //4:28 satellite
 alarm[1] = 290 * 60;  //4:50 beams
 alarm[2] = 301 * 60; //5:01 more beams
@@ -181,7 +182,8 @@ alarm[1] = random(10)* 60;
           <argument>
             <kind>1</kind>
             <string>///4:28 SatelliteAppears
-object_set_visible(obj_satellite, true);
+visible = true;
+//object_set_visible(obj_satellite, true);
 /*instance_create(self.x,self.y,obj_satelliteBeam);
 alarm[0] = random(3)* 60;
 </string>
