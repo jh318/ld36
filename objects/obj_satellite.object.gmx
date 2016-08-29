@@ -2,7 +2,7 @@
 <object>
   <spriteName>spr_satellite</spriteName>
   <solid>0</solid>
-  <visible>-1</visible>
+  <visible>0</visible>
   <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
@@ -26,10 +26,112 @@
           <argument>
             <kind>1</kind>
             <string>///Alarms
-alarm[0] = 301 * 60; //5:01 Increase Spawn
-alarm[1] = 367 * 60; //6:07Super beam wave
-alarm[2] = 30 * 60;
-alarm[3] = 40 * 60;
+alarm[0] = 268 * 60; //4:28 satellite
+alarm[1] = 290 * 60;  //4:50 beams
+alarm[2] = 301 * 60; //5:01 more beams
+alarm[3] = 334 * 60; //5:34
+alarm[4] = 355 * 60; //5:55
+alarm[5] = 367 * 60;  //6:07 finale
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="5">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///6:07 beams++
+instance_create(self.x,self.y,obj_satelliteBeam);
+alarm[5] = 30;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///5:55 beams++
+instance_create(self.x,self.y,obj_satelliteBeam);
+alarm[4] = random(10)* 60;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="3">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///5:34 beams++
+instance_create(self.x,self.y,obj_satelliteBeam);
+alarm[3] = random(10)* 60;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///5:01 beams++
+instance_create(self.x,self.y,obj_satelliteBeam);
+alarm[2] = random(10)* 60;
 </string>
           </argument>
         </arguments>
@@ -52,9 +154,9 @@ alarm[3] = 40 * 60;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///BeamWave
+            <string>///4:50 BeamWave
 instance_create(self.x,self.y,obj_satelliteBeam);
-alarm[1] = 30;
+alarm[1] = random(10)* 60;
 </string>
           </argument>
         </arguments>
@@ -77,8 +179,9 @@ alarm[1] = 30;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///BeamWave
-instance_create(self.x,self.y,obj_satelliteBeam);
+            <string>///4:28 SatelliteAppears
+object_set_visible(obj_satellite, true);
+/*instance_create(self.x,self.y,obj_satelliteBeam);
 alarm[0] = random(3)* 60;
 </string>
           </argument>
