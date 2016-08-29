@@ -57,7 +57,7 @@ alarm[5] = 367 * 60;  //6:07 finale
             <kind>1</kind>
             <string>///6:07 beams++
 instance_create(self.x,self.y,obj_satelliteBeam);
-alarm[5] = 30;
+alarm[5] = 120;
 </string>
           </argument>
         </arguments>
@@ -82,7 +82,7 @@ alarm[5] = 30;
             <kind>1</kind>
             <string>///5:55 beams++
 instance_create(self.x,self.y,obj_satelliteBeam);
-alarm[4] = random(10)* 60;
+alarm[4] = 120;
 </string>
           </argument>
         </arguments>
@@ -107,7 +107,7 @@ alarm[4] = random(10)* 60;
             <kind>1</kind>
             <string>///5:34 beams++
 instance_create(self.x,self.y,obj_satelliteBeam);
-alarm[3] = random(10)* 60;
+alarm[3] = 120;
 </string>
           </argument>
         </arguments>
@@ -132,7 +132,7 @@ alarm[3] = random(10)* 60;
             <kind>1</kind>
             <string>///5:01 beams++
 instance_create(self.x,self.y,obj_satelliteBeam);
-alarm[2] = random(10)* 60;
+alarm[2] = 30;
 </string>
           </argument>
         </arguments>

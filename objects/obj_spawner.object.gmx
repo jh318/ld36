@@ -57,7 +57,7 @@ alarm[6] = 214 * 60; //3:34 robot++
             <kind>1</kind>
             <string>///3:34 RobotWave++
 instance_create(self.x,self.y,obj_robot);
-alarm[6] = random(15) * 60;
+alarm[6] = random(25) * 60;
 </string>
           </argument>
         </arguments>
@@ -82,7 +82,7 @@ alarm[6] = random(15) * 60;
             <kind>1</kind>
             <string>///3:01 TankWave++
 instance_create(self.x,self.y,obj_tank);
-alarm[5] = random(9)* 60;
+alarm[5] = random(25)* 60;
 </string>
           </argument>
         </arguments>
@@ -107,7 +107,7 @@ alarm[5] = random(9)* 60;
             <kind>1</kind>
             <string>///2:50 RobotWave++
 instance_create(self.x,self.y,obj_robot);
-alarm[4] = random(15) * 60;
+alarm[4] = random(25) * 60;
 </string>
           </argument>
         </arguments>
@@ -132,7 +132,7 @@ alarm[4] = random(15) * 60;
             <kind>1</kind>
             <string>///2:16 RobotWave
 instance_create(self.x,self.y,obj_robot);
-alarm[3] = random(15) * 60;
+alarm[3] = random(20) * 60;
 </string>
           </argument>
         </arguments>
@@ -157,7 +157,7 @@ alarm[3] = random(15) * 60;
             <kind>1</kind>
             <string>///2:04 TankWave++
 instance_create(self.x,self.y,obj_tank);
-alarm[2] = random(9)* 60;
+alarm[2] = random(25)* 60;
 </string>
           </argument>
         </arguments>
@@ -182,7 +182,7 @@ alarm[2] = random(9)* 60;
             <kind>1</kind>
             <string>///0:58 TankWave++
 instance_create(self.x,self.y,obj_tank);
-alarm[1] = random(9)* 60;
+alarm[1] = random(8)* 60;
 </string>
           </argument>
         </arguments>

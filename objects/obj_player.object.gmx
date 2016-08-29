@@ -28,9 +28,9 @@
             <string>///PlayerAttributes
 hsp = 0; //horizontalspeed
 vsp = 0; //verticalspeed
-jsp = 4; //jumpspeed
-msp = 5; //movespeed
-grav = 0.2; //gravity applied to player object
+jsp = 18; //jumpspeed
+msp = 6; //movespeed
+grav = 0.4; //gravity applied to player object
 pdirection = 1;
 </string>
           </argument>
@@ -133,7 +133,7 @@ key_a = keyboard_check_pressed(ord('A'));
 key_s = keyboard_check_pressed(ord('S'));
 key_d = keyboard_check_pressed(ord('D'));
 
-if (key_up &amp;&amp; key_z)||(key_up &amp;&amp; key_x)||(key_up &amp;&amp; key_c){ //Check if up and z are pressed
+if (key_up &amp;&amp; key_z)||(key_up &amp;&amp; key_x)||(key_up &amp;&amp; key_c)||(key_up &amp;&amp; key_v)||(key_up &amp;&amp; key_a)||(key_up &amp;&amp; key_s)||(key_up &amp;&amp; key_d){ //Check if up and z are pressed
     projectile = instance_create(x,y+12,obj_projectile); //create projectile slightly higher
     projectile.direction = 90; //Rotate projectile directionup
     projectile.image_angle = 90; //Rotate image up
@@ -142,7 +142,7 @@ if (key_up &amp;&amp; key_z)||(key_up &amp;&amp; key_x)||(key_up &amp;&amp; key_
 
 
 ///SHOOT LEFT AND RIGHT
-if (key_z &amp;&amp; !key_up)||(key_x &amp;&amp; !key_up)||(key_c &amp;&amp; !key_up){
+if (key_z &amp;&amp; !key_up)||(key_x &amp;&amp; !key_up)||(key_c &amp;&amp; !key_up)||(key_v &amp;&amp; !key_up)||(key_a &amp;&amp; !key_up)||(key_s &amp;&amp; !key_up)||(key_d &amp;&amp; !key_up){
     projectile = instance_create(x,y,obj_projectile);
 if(mdirection != 0){
     pdirection = mdirection} //Hold either -1 or 1 in new variable; Avoid 0 - sitting projectile

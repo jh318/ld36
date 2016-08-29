@@ -30,6 +30,33 @@ alarm[0] = 103 * 60; //1:43
 alarm[1] = 124 * 60; //1:54
 alarm[2] = 234 * 60; //3:56
 alarm[3] = 256 * 60; //4:16
+alarm[4] = 367 * 60;  //6:07 finale
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///1:54 DroneWave++
+instance_create(self.x,self.y,obj_drone);
+instance_create(self.x,self.y,obj_drone);
+alarm[1] = random(2)* 60;
 </string>
           </argument>
         </arguments>
@@ -104,7 +131,8 @@ alarm[2] = random(10)* 60;
             <kind>1</kind>
             <string>///1:54 DroneWave++
 instance_create(self.x,self.y,obj_drone);
-alarm[1] = random(4)* 60;
+instance_create(self.x,self.y,obj_drone);
+alarm[1] = random(15)* 60;
 </string>
           </argument>
         </arguments>
