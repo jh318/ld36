@@ -54,6 +54,7 @@ alarm[3] = 40 * 60;
             <kind>1</kind>
             <string>///DroneWave
 instance_create(self.x,self.y,obj_drone);
+instance_create(self.x,self.y,obj_nuke);
 alarm[0] = random(3)* 60;
 </string>
           </argument>

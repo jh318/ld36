@@ -42,6 +42,9 @@
       <sprite>sprites\spr_tank</sprite>
       <sprite>sprites\spr_robot</sprite>
       <sprite>sprites\spr_drone</sprite>
+      <sprite>sprites\spr_nuke</sprite>
+      <sprite>sprites\spr_satellite</sprite>
+      <sprite>sprites\spr_satelliteBeam</sprite>
     </sprites>
     <sprite>sprites\spr_player</sprite>
     <sprite>sprites\spr_village</sprite>
@@ -54,7 +57,7 @@
   <scripts name="scripts">
     <script>scripts\scr_enemyMoveCollison.gml</script>
     <script>scripts\scr_enemyAttributes.gml</script>
-    <script>scripts\script2.gml</script>
+    <script>scripts\scr_eneyProjectiles.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="EnemyObjects">
@@ -62,6 +65,9 @@
       <object>objects\obj_robot</object>
       <object>objects\obj_enemyParent</object>
       <object>objects\obj_drone</object>
+      <object>objects\obj_satellite</object>
+      <object>objects\obj_satelliteBeam</object>
+      <object>objects\obj_nuke</object>
     </objects>
     <objects name="Spawners">
       <object>objects\obj_spawner</object>
