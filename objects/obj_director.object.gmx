@@ -103,6 +103,9 @@ if(time == 0) finalScore = score;
 /*if(time &lt;= 0){
 //room_goto(rm_endgame);
 }*/
+/*if keyboard_check(ord('T')){
+time -= 10;
+}
 </string>
           </argument>
         </arguments>

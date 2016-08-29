@@ -55,8 +55,8 @@
     <instance objName="obj_player" x="736" y="640" name="inst_D09E4110" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_village" x="1024" y="672" name="inst_F25D2BB6" locked="0" code="" scaleX="-1.25" scaleY="-1.25" colour="4294967295" rotation="0"/>
     <instance objName="obj_director" x="672" y="512" name="inst_3BA0C7ED" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_spawner" x="1952" y="608" name="inst_7617E5FE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_spawner" x="32" y="608" name="inst_EFC5B5A6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_spawner" x="1600" y="640" name="inst_7617E5FE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_spawner" x="416" y="640" name="inst_EFC5B5A6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_boundary" x="448" y="448" name="inst_FFCE0F41" locked="0" code="" scaleX="2" scaleY="7.22580623626709" colour="4294967295" rotation="0"/>
     <instance objName="obj_boundary" x="1536" y="416" name="inst_D22DDD7C" locked="0" code="" scaleX="2" scaleY="8" colour="4294967295" rotation="0"/>
     <instance objName="obj_aerialSpawner" x="544" y="160" name="inst_7954C3FB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

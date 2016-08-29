@@ -26,10 +26,35 @@
           <argument>
             <kind>1</kind>
             <string>///Alarms
-alarm[0] = 3 * 60;
-alarm[1] = 10 * 60;
-alarm[2] = 30 * 60;
+alarm[0] = 12 * 60; //12 seconds
+alarm[1] = 103 * 60; //
+alarm[2] = 170 * 60; //2:50 spawn robots
 alarm[3] = 40 * 60;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///2:50 RobotWave
+instance_create(self.x,self.y,obj_robot);
+alarm[2] = random(7) * 60;
 </string>
           </argument>
         </arguments>
@@ -52,9 +77,9 @@ alarm[3] = 40 * 60;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///RobotWave
-instance_create(self.x,self.y,obj_robot);
-alarm[1] = random(3) * 60;
+            <string>///1:43 TankWave++
+instance_create(self.x,self.y,obj_tank);
+alarm[1] = random(3)* 60;
 </string>
           </argument>
         </arguments>
@@ -77,9 +102,9 @@ alarm[1] = random(3) * 60;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///TankWave
-instance_create(self.x,self.y,obj_tank);
-alarm[0] = random(3)* 60;
+            <string>///At 0:12 Spawn tanks
+instance_create(self.x,self.y,obj_tank); //
+alarm[0] = random(7)* 60;
 </string>
           </argument>
         </arguments>

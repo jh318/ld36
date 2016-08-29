@@ -26,10 +26,60 @@
           <argument>
             <kind>1</kind>
             <string>///Alarms
-alarm[0] = 3 * 60;
-alarm[1] = 10 * 60;
-alarm[2] = 30 * 60;
+alarm[0] = 103 * 60;
+alarm[1] = 124 * 60;
+alarm[2] = 236 * 60;
 alarm[3] = 40 * 60;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//NukeWave
+instance_create(self.x,self.y,obj_nuke);
+alarm[2] = random(10)* 60;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///DroneWave++
+instance_create(self.x,self.y,obj_drone);
+alarm[1] = random(4)* 60;
 </string>
           </argument>
         </arguments>
@@ -54,8 +104,7 @@ alarm[3] = 40 * 60;
             <kind>1</kind>
             <string>///DroneWave
 instance_create(self.x,self.y,obj_drone);
-instance_create(self.x,self.y,obj_nuke);
-alarm[0] = random(3)* 60;
+alarm[0] = random(7)* 60;
 </string>
           </argument>
         </arguments>
