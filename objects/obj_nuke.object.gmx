@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_enemyAttributes(0,2,0,0,0);
+            <string>///AssignNukeAttributes
+scr_enemyAttributes(0,3,0,0,0);
 </string>
           </argument>
         </arguments>
@@ -49,7 +50,7 @@
           <argument>
             <kind>1</kind>
             <string>///NukeAI
-move_towards_point(obj_village.x,obj_village.y,5);
+move_towards_point(obj_village.x,obj_village.y,1);
 //scr_enemyMoveCollison();
 if (self.x &gt; obj_village.x){ //determine position of village
     mdirection = -1; } //Move left
