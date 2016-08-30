@@ -36,6 +36,7 @@
       <sound>sound\snd_shoot3</sound>
     </sounds>
     <sound>sound\snd_timelineMelody</sound>
+    <sound>sound\snd_victory</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="EnemySprites">

@@ -49,6 +49,8 @@ shoot[0] = snd_shoot1;
 shoot[1] = snd_shoot2;
 shoot[2] = snd_shoot3;
 
+
+
  
 </string>
           </argument>
@@ -77,6 +79,7 @@ time -= 1; //Subtract 1 second
 if(time != 0){
 alarm[0] = 1 * 60;} //Reset subtraction clock to 1 second
 if(time == 0) finalScore = score;
+if(time &lt;= 0) audio_play_sound(snd_victory, 99, false);
 </string>
           </argument>
         </arguments>
