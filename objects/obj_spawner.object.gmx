@@ -27,12 +27,13 @@
             <kind>1</kind>
             <string>///Alarms
 alarm[0] = 12 * 60; //0:12 seconds
-alarm[1] = 58 * 60; //0:58
+alarm[1] = 103 * 60; //1:43
 alarm[2] = 124 * 60; //2:04 
 alarm[3] = 136 * 60; //2:16 spawn robots
 alarm[4] = 170 * 60; //2:50 spawn robots++
 alarm[5] = 181 * 60; //3:01 tanks++
 alarm[6] = 214 * 60; //3:34 robot++
+
 </string>
           </argument>
         </arguments>
@@ -180,7 +181,7 @@ alarm[2] = random(25)* 60;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///0:58 TankWave++
+            <string>///1:43 TankWave++
 instance_create(self.x,self.y,obj_tank);
 alarm[1] = random(8)* 60;
 </string>

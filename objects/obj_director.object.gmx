@@ -130,10 +130,15 @@ time -= 10;
             <kind>1</kind>
             <string>///DrawGUI
 //draw_text(5,5, string(score))
-draw_text_transformed(20,40,string("Score: "),1,1,0)
-draw_text_transformed(80,40,string(score),1,1,0) //Draw socre position and scale size
-draw_text_transformed(20,80,string("Time: "),1,1,0)
-draw_text_transformed(80,80,string(time),1,1,0); //Draw timer
+draw_text_transformed(20,20,string("Throw Stuff:"),1,1,0)
+draw_text_transformed(20,35,string("zxcvbasdfgqwert"),1,1,0)
+draw_text_transformed(20,50,string("move: space&amp;arrows"),1,1,0)
+draw_text_transformed(20,80,string("Score: "),1,1,0)
+draw_text_transformed(80,80,string(score),1,1,0) //Draw socre position and scale size
+draw_text_transformed(20,95,string("Time: "),1,1,0)
+draw_text_transformed(80,95,string(time),1,1,0); //Draw timer
+
+//draw_text_transformed(20,200,string("Jump&amp;Move:Space&amp;Arrows"),1,1,0)
 
 if(time &lt;= 0){ //When timer reaches 0, display final score; rm will switch to rm_endgame
 draw_text_transformed(342,384,string("Final Score: "),2,2,0) //Draw text "Final score in middle of screen
